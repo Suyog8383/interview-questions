@@ -1,0 +1,42 @@
+const badgeTimes = [
+  ["Paul", "1355"],
+  ["Jennifer", "1910"],
+  ["Jose", "835"],
+  ["Jose", "830"],
+  ["Paul", "1315"],
+  ["Chloe", "0"],
+  ["Chloe", "1910"],
+  ["Jose", "1615"],
+  ["Jose", "1640"],
+  ["Paul", "1405"],
+  ["Jose", "855"],
+  ["Jose", "930"],
+  ["Jose", "915"],
+  ["Jose", "730"],
+  ["Jose", "940"],
+  ["Jennifer", "1335"],
+  ["Jennifer", "0730"],
+  ["Jose", "1630"],
+  ["Jennifer", "0005"],
+  ["Chloe", "1909"],
+  ["Zhang", "0001"],
+  ["Zhang", "0010"],
+  ["Zhang", "0109"],
+  ["Zhang", "0110"],
+  ["Amos", "0001"],
+  ["Amos", "0002"],
+  ["Amos", "0400"],
+  ["Amos", "0500"],
+  ["Amos", "0503"],
+  ["Amos", "0504"],
+  ["Amos", "601"],
+  ["Amos", "602"],
+  ["Paul", "1416"],
+];
+const badgeTimeFun = badgeTimes.map(([person, time]) => [
+  person,
+  parseInt(time),
+]);
+badgeTimeFun.sort(([, time1], [, time2]) => time2 - time1);
+const mostRecentBadge = badgeTimeFun.slice(0, 3);
+console.log("@SN ", badgeTimeFun);
